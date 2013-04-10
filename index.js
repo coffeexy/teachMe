@@ -1,7 +1,8 @@
 function $(id){
     return document.getElementById(id);
 }
-var num = parseInt(Math.random()*9)
+//alert(Math.random())
+var num = Math.round(Math.random())
 $("num").innerHTML = num;
 
 var data = [];
@@ -79,7 +80,7 @@ function draw(ctx) {
 function binary(canvas,number) {
     var datum = {
     input: [],
-    output: [0,0,0,0,0,0,0,0,0,0]/*{
+    output: [0,0]/*{
         number0: 0,
         number1: 0,
         number2: 0,
@@ -113,8 +114,14 @@ function binary(canvas,number) {
     data.push(datum);
     //初始化canvas数据
     ctx.clearRect(0,0,imagedata.width,imagedata.height);
-    num = parseInt(Math.random()*9)
+    num = Math.round(Math.random());
     $("num").innerHTML = num;
+    if(data.length > 1){
+        $("stop").value = "多画几次我会更聪明";
+    }
+    if(data.length > 5){
+       $("stop").value = "看看我学得怎么样"; 
+    }
 
 }
 var net = new brain.NeuralNetwork();
@@ -134,6 +141,7 @@ function text(){
        s = s + "\n "+property +": " + output[property] ;  
     } 
     console.log(s);
+    alert("数字为1的概率为"+output[1]+"\n数字为0的概率为"+output[0]);
 }
 
 

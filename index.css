@@ -16,7 +16,7 @@ header{
   padding: 14px 15px 13px;
 }
 canvas{
-  border: 1px solid #ccc;
+  outline: 1px solid #ccc;
 }
 .main{
   width: 1005px;
