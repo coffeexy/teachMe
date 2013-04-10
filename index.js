@@ -37,7 +37,6 @@ function loop() {
 }
 function mouseUp(e) {
     isMouseDown = false;
-    alert(num)
     binary($("draw"), num);
 }
 function mouseMove(e) {
@@ -124,7 +123,6 @@ function train(){
     $("Texting").style.display = "block";
     net.train(data);
     var canvas = $("Text").getContext('2d');
-
     canvas.fillRect(20,20,18,130);
 }
 
