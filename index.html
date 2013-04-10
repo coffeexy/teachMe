@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>teachMe</title>
+	<link rel="stylesheet" href="index.css" />
+  <script type="text/javascript" src="brain-0.6.0.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="main">
+      <h1>please teach me recognize number！</h1>
+    </div>
+  </header>
+  <div class="main">
+    <div id="Training">
+      <canvas id="draw" height="160" width="160"></canvas>
+      <div>
+        <a id="num">1</a>
+        <br/>
+        <input type="button" size="21" value="停止训练，看结果" id="stop">       
+      </div>
+      
+      <br/>
+      <!-- <input type="text" size="21"> -->
+    </div>
+    <div id="Texting">
+
+      <canvas id="Text" height="160" width="160"></canvas>
+      <input type="button" size="21" value="测试" id="text">
+    </div>
+    <!-- <div id="Testing">
+      <canvas id="Test" height="160" width="160"></canvas>
+    </div> -->
+  </div>  
+  <footer>  	
+  </footer>
+  <script type="text/javascript" src="index.js"></script>
+
+</body>
+</html>
